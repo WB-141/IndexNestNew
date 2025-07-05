@@ -1,0 +1,372 @@
+body {
+  margin: 0px;
+  font-size: 16px;
+  font-family: "Poppins";
+}
+
+/*Hero*/
+.hero-part {
+  background-color: #121212;
+}
+.hero-bg {
+  background-image: url(Assets/BG.png);
+  width: auto;
+  height: 100vh;
+  object-fit: fill;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(18, 18, 18, 0.763);
+  align-content: center;
+}
+
+.hero-logo {
+  position: absolute;
+  display: flex;
+
+  z-index: 3;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+
+  animation: fade-in 2s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.hero-logo > img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: auto;
+}
+
+.slogan-text {
+  color: #a1bb82;
+  font-family: "Poppins";
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(15%);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+
+  animation: fade-in 2s ease-in 1.2s forwards;
+}
+
+.arrow-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  justify-self: center;
+  transform: translateY(750%);
+  width: 8%;
+  opacity: 0;
+  animation: fade-in-move 5s ease-in 2s infinite;
+  height: auto;
+}
+
+@keyframes fade-in-move {
+  0% {
+    opacity: 0;
+    transform: translateY(750%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(800%);
+  }
+
+  100% {
+    transform: translateY(750%);
+  }
+}
+
+/*intr page*/
+
+.introduction-page {
+  width: 100%;
+  height: auto;
+}
+
+.introduction-bg {
+  width: 100%;
+  height: auto;
+}
+
+.introduction-gradient {
+  background: linear-gradient(#282828, #121212);
+  width: 100%;
+  height: auto;
+}
+
+.introduction-gradient > h1 {
+  margin: 0px;
+  padding: 1rem;
+  width: 92vw;
+  height: auto;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  background: linear-gradient(#a1bb82, #849d65);
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: auto;
+
+  width: 90%;
+  height: 85%;
+}
+
+.icon-container > span {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  max-width: 90%;
+  padding-bottom: 2rem;
+}
+
+.icon-holders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: start;
+
+  width: 90%;
+  height: auto;
+}
+
+.icon-holder {
+  display: flex;
+  background: linear-gradient(#acc292, #7e9661);
+  box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
+  border-radius: 8%;
+  width: 30%;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  animation: box-shadow-pulse 6s ease-in-out infinite;
+}
+
+@keyframes box-shadow-pulse {
+  0% {
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
+  }
+  50% {
+    box-shadow: 0px 0px 19px #acc292;
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
+  }
+}
+
+.icon-holder-bg {
+  display: flex;
+  justify-content: center;
+  border-radius: 8%;
+  align-items: center;
+  background: linear-gradient(#353535, #171717);
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-container > h2 {
+  margin-top: 5vh;
+  font-size: 0.9rem;
+  color: rgb(245, 245, 245);
+  text-transform: uppercase;
+}
+
+.introduction-container > h2 {
+  padding: 0.8rem;
+  font-size: 1.5rem;
+
+  color: rgb(221, 221, 221);
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay-info {
+  position: absolute;
+  z-index: 4;
+  background: linear-gradient(#353535, #171717);
+  height: 100vh;
+  width: 100vw;
+}
+
+.top-part {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+  margin-top: 5%;
+}
+
+.top-part > h3 {
+  color: #efefef;
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-left: 3%;
+}
+
+.top-part > p {
+  color: #efefef;
+  margin-top: -5%;
+  font-size: 0.9rem;
+  padding: 1rem;
+  margin-left: 3%;
+  max-width: 80%;
+}
+
+/*Werkwijze*/
+.werkwijze-part {
+  display: flex;
+  background: linear-gradient(#acc292, #7e9661);
+  width: 100%;
+  height: 85svh;
+  align-items: start;
+  justify-content: center;
+}
+
+.werkwijze-header {
+  margin: 0;
+  padding: 1rem;
+  width: 92vw;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  background: linear-gradient(#a1bb82, #849d65);
+  z-index: 3;
+  color: black;
+}
+
+.werkwijze-part {
+  background-image: url(Assets/BG.png);
+  padding-right: 30%;
+  padding-right: 0px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  object-fit: cover; /* Fills container without distortion */
+  object-position: top center;
+}
+
+.profile {
+  width: 70%;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0px 0px 15px black;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.cover {
+  background-color: #121212a9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.werkwijze-part > span {
+  font-size: 0.9rem;
+  max-width: 100%;
+
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  z-index: 3;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*wat leverik*/
+.watleverik-part {
+  background-color: #121212;
+  display: flex;
+  padding-right: 30%;
+  padding-right: 0px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  object-fit: cover; /* Fills container without distortion */
+  object-position: top center;
+}
+
+.watleverik-bg {
+  display: flex;
+  width: 100%;
+  height: 150svh;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+#onepage {
+  background: linear-gradient(#7d93ac, #617996) !important;
+}
+
+#multipage {
+  background: linear-gradient(#c2a982, #a78965) !important;
+}
+
+#galery {
+  background: linear-gradient(#a38ebc, #8871a1) !important;
+}
