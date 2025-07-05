@@ -9,6 +9,7 @@ body {
   background-color: #121212;
 }
 .hero-bg {
+  display: flex;
   background-image: url(Assets/BG.png);
   width: auto;
   height: 100vh;
@@ -17,6 +18,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero-align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-bg-overlay {
@@ -29,10 +36,9 @@ body {
 }
 
 .hero-logo {
-  position: absolute;
   display: flex;
-
   z-index: 3;
+  transform: translateY(-50%);
   left: 0;
   right: 0;
 
@@ -58,13 +64,13 @@ body {
 .slogan-text {
   color: #a1bb82;
   font-family: "Poppins";
-  position: absolute;
   left: 0;
   right: 0;
-  transform: translateY(25%);
-  padding: 1.5rem;
+  transform: translateY(15%);
+  max-width: 75%;
+  margin-top: 0px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   opacity: 0;
 
@@ -79,8 +85,6 @@ body {
   transform: translateY(750%);
   width: 8%;
   opacity: 0;
-  margin-left: auto;
-  margin-right: auto;
   animation: fade-in-move 5s ease-in 2s infinite;
   height: auto;
 }
