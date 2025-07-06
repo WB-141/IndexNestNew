@@ -4,6 +4,13 @@ body {
   font-family: "Poppins";
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /*Hero*/
 .hero-part {
   background-color: #121212;
@@ -61,6 +68,14 @@ body {
   height: auto;
 }
 
+.hero-align > p {
+  font-size: 0.8rem;
+  transform: translateY(900%);
+  color: #efefef;
+  opacity: 0;
+  animation: fade-in 2s ease-in 2s forwards;
+}
+
 .slogan-text {
   color: #a1bb82;
   font-family: "Poppins";
@@ -68,7 +83,7 @@ body {
   right: 0;
   transform: translateY(15%);
   max-width: 75%;
-  margin-top: 0px;
+  margin-top: -10px;
   text-align: center;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -82,7 +97,7 @@ body {
   left: 0;
   right: 0;
   justify-self: center;
-  transform: translateY(750%);
+  transform: translateY(950%);
   width: 8%;
   margin-left: auto;
   margin-right: auto;
@@ -94,16 +109,16 @@ body {
 @keyframes fade-in-move {
   0% {
     opacity: 0;
-    transform: translateY(750%);
+    transform: translateY(1050%);
   }
 
   50% {
     opacity: 1;
-    transform: translateY(800%);
+    transform: translateY(1120%);
   }
 
   100% {
-    transform: translateY(750%);
+    transform: translateY(1070%);
   }
 }
 
@@ -183,7 +198,7 @@ body {
 .icon-holder {
   display: flex;
   background: linear-gradient(#acc292, #7e9661);
-  box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
+  box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.72);
   border-radius: 8%;
   width: 30%;
   height: auto;
@@ -193,20 +208,21 @@ body {
   margin-top: 1rem;
   justify-content: center;
   align-items: center;
-
-  animation: box-shadow-pulse 6s ease-in-out infinite;
 }
 
-@keyframes box-shadow-pulse {
-  0% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
-  }
-  50% {
-    box-shadow: 0px 0px 19px #acc292;
-  }
-  100% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
-  }
+#addpackage{
+   display: flex;
+  background: linear-gradient(#d58686 , #b36868);
+  box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.72);
+  border-radius: 8%;
+  width: 30%;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-holder-bg {
@@ -226,13 +242,14 @@ body {
   margin-top: 5vh;
   font-size: 0.9rem;
 
-  color: rgb(245, 245, 245);
+  color: #a1bb82;
   text-transform: uppercase;
 }
 
 .introduction-container > h2 {
   padding: 0.8rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 
   color: rgb(221, 221, 221);
 }
@@ -241,6 +258,33 @@ body {
   display: none;
 }
 
+.cto-button {
+  transform: translateY(-40%);
+  background: linear-gradient(#353535, #171717);
+  color: #efefef;
+  margin-top: 16%;
+  border-radius: 8px;
+  padding: 0.5rem;
+  height: auto;
+  width: 54vw;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#ctobutton1 {
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+
+.cto-button:hover {
+  background: linear-gradient(#4b4b4b, #2b2b2b);
+  transform: translateY(-42%);
+}
 .overlay-info {
   position: absolute;
   z-index: 4;
@@ -330,6 +374,10 @@ body {
   height: 100%;
 }
 
+#margin-bottom {
+  margin-bottom: 3rem;
+}
+
 .werkwijze-part > span {
   font-size: 0.9rem;
   max-width: 100%;
@@ -348,7 +396,7 @@ body {
 
 /*wat leverik*/
 .watleverik-part {
-  background-color: #121212;
+  background: linear-gradient(#282828, #121212);
   display: flex;
   padding-right: 30%;
   padding-right: 0px;
@@ -367,10 +415,19 @@ body {
   text-align: center;
 }
 
+.icon-holders > span {
+  color: #efefef;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .wl-header {
   margin: 0;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   width: 92vw;
   font-family: "Poppins";
   text-transform: uppercase;
@@ -384,7 +441,9 @@ body {
 .watleverik-bg {
   display: flex;
   width: 100%;
-  height: 150svh;
+  min-height: 330svh;
+  height: auto;
+  padding-bottom: 2rem;
   margin-top: 2rem;
   justify-content: center;
 }
@@ -405,53 +464,201 @@ body {
   border-radius: 2%;
 }
 
-#onepage {
-  background: linear-gradient(#cfdcae, #acb98a) !important;
-  animation: onepage-box-shadow-pulse 6s ease-in-out infinite;
+.icon-holders > p {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  cursor: pointer;
+  padding-bottom: 3rem;
+  animation: scale ease-in-out 6s infinite;
 }
 
-#multipage {
-  background: linear-gradient(#e5d9b6, #b3a681) !important;
-  animation: multipage-box-shadow-pulse 6s ease-in-out infinite;
-}
-
-#galery {
-  background: linear-gradient(#d8a47f, #9b7254) !important;
-  animation: galery-box-shadow-pulse 6s ease-in-out infinite;
-}
-
-@keyframes onepage-box-shadow-pulse {
+@keyframes scale {
   0% {
-    box-shadow: 0px 0px 15px #808080b8;
+    transform: scale(1);
   }
   50% {
-    box-shadow: 0px 0px 19px #cfdcae;
+    transform: scale(1.05);
+    color: #ffffff;
   }
   100% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
+    transform: scale(1);
   }
 }
 
-@keyframes multipage-box-shadow-pulse {
-  0% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
-  }
-  50% {
-    box-shadow: 0px 0px 19px #e5d9b6;
-  }
-  100% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
-  }
+.faq-part {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#363535, #121212);
+  width: 100%;
+  min-height: 110svh;
+  margin-top: -10%;
+  height: auto;
+  padding-bottom: 2rem;
+  align-items: start;
+  justify-content: center;
 }
 
-@keyframes galery-box-shadow-pulse {
-  0% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
-  }
-  50% {
-    box-shadow: 0px 0px 19px #d8a47f;
-  }
-  100% {
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.72);
-  }
+.faq-bg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 93svh;
+  padding-left: 6%;
+}
+
+.faq-bold {
+  display: flex;
+  padding: 1%;
+  padding-left: 6%;
+  margin-left: -6%;
+  background: linear-gradient(#2b2b2b, #121212);
+  width: 100vw;
+  color: #a1bb82;
+  font-weight: bolder;
+}
+
+.faq-answer {
+  color: #efefef;
+  font-size: 0.78rem;
+  max-width: 85%;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.contact-bg {
+  background: linear-gradient(#2b2b2b, #121212);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100svh;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-part {
+  position: relative;
+  z-index: 5;
+}
+/* Donkere overlay */
+
+/* Formulier-container */
+.form-container {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Formulier layout */
+.input-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Input containers */
+.input-contact {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+/* Labels */
+.input-contact label {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.7rem;
+  background-color: #efefef;
+  color: #1e1e1e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Input en textarea */
+.input-contact input,
+.input-contact textarea {
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  background-color: #d6d6d6;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: inherit;
+}
+
+/* Textarea specifieke styling */
+#question-box {
+  height: 35svh;
+  background-color: #d6d6d6;
+  width: 90%;
+  resize: none;
+}
+
+/* Karaktertelling */
+#character_count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #efefef;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+
+/* Vraag label + counter layout */
+.questionbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Verzendknop */
+.send-button {
+  width: 80vw;
+  height: 6vh;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#353535, #171717);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.send-button:hover {
+  background: linear-gradient(#4b4b4b, #2b2b2b);
+}
+
+/*Footer*/
+
+.footer-part{
+  height: 13svh;
+  width: 100%;
+}
+
+.footer-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#a1bb82, #849d65);
+  width: 100%;
+  height: 100%;
+}
+
+.footer-bg > h4{
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.footer-bg > h4> a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
