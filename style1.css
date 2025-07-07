@@ -97,7 +97,7 @@ body {
   left: 0;
   right: 0;
   justify-self: center;
-  transform: translateY(950%);
+  transform: translateY(900%);
   width: 8%;
   margin-left: auto;
   margin-right: auto;
@@ -109,16 +109,16 @@ body {
 @keyframes fade-in-move {
   0% {
     opacity: 0;
-    transform: translateY(1050%);
+    transform: translateY(900%);
   }
 
   50% {
     opacity: 1;
-    transform: translateY(1120%);
+    transform: translateY(950%);
   }
 
   100% {
-    transform: translateY(1070%);
+    transform: translateY(900%);
   }
 }
 
@@ -210,9 +210,9 @@ body {
   align-items: center;
 }
 
-#addpackage{
-   display: flex;
-  background: linear-gradient(#d58686 , #b36868);
+#addpackage {
+  display: flex;
+  background: linear-gradient(#d58686, #b36868);
   box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.72);
   border-radius: 8%;
   width: 30%;
@@ -637,12 +637,12 @@ body {
 
 /*Footer*/
 
-.footer-part{
+.footer-part {
   height: 13svh;
   width: 100%;
 }
 
-.footer-bg{
+.footer-bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -651,14 +651,93 @@ body {
   height: 100%;
 }
 
-.footer-bg > h4{
+.footer-bg > h4 {
   text-decoration: none;
   font-size: 0.9rem;
   color: black;
 }
 
-.footer-bg > h4> a{
+.footer-bg > h4 > a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .slogan-text {
+    font-size: 2rem;
+  }
+
+  .hero-align > p {
+    transform: translateY(360%);
+    opacity: 0;
+    font-size: 1.5rem;
+  }
+
+  .arrow-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    transform: translateY(-200%);
+    width: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: desktop-fade-in-move 5s ease-in 2s infinite;
+  }
+
+  @keyframes desktop-fade-in-move {
+    0% {
+      opacity: 0;
+      transform: translateY(800%);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(850%);
+    }
+
+    100% {
+      transform: translateY(800%);
+    }
+  }
+
+  .introduction-page{
+    height: 85vh;
+  }
+
+  .introduction-gradient > h1 {
+    width: 100vw;
+  }
+
+  .introduction-gradient{
+    height: 85svh;
+  }
+
+  .icon-holders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .icon-holder{
+    width: 50%;
+  }
+
+  #pakket{
+    margin-top: 8%;
+  }
+
+
+  .werkwijze-header{
+    width: 100svw;
+  }
+
+  .profile{
+    width: 30%;
+  }
+
+  .werkwijze-part > span{
+    width: 40%;
+  }
 }
