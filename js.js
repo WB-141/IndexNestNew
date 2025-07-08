@@ -37,5 +37,30 @@ function countchar() {
   });
 }
 
+function accordion() {
+  const headers = document.querySelectorAll(".faq-bold");
+
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const item = header.parentElement;
+      const content = item.querySelector(".faq-answer");
+
+      // Sluit alle andere antwoorden
+      document.querySelectorAll(".faq-answer").forEach(c => {
+        if (c !== content) c.style.maxHeight = null;
+      });
+
+      // Toggle huidig antwoord
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+}
+
+
+accordion();
 scrolltoview();
 countchar();
